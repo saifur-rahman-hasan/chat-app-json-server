@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "email": "saifur.dohs@gmail.com",
+      "password": "$2a$10$a8JH/lQs.6bcSbwIX2JfDedHad3sF8Ng/yTNPE6purrc54Nm7GflC",
+      "name": "Saifur Rahman",
+      "id": 1
+    },
+    {
+      "email": "reza@gmail.com",
+      "password": "$2a$10$JXU4ucThEXOe2YumHWSLuO.YtQtfk3TLXuAOARBDoeiUGqj0kcO8W",
+      "name": "Reza",
+      "id": 2
+    }
+  ],
+  "conversations": [],
+  "messages": []
+}
