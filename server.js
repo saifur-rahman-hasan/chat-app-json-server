@@ -16,6 +16,7 @@ router.render = (req, res) => {
     const path = req.path;
     const method = req.method;
 
+    // Socket Config for Conversations
     if (
         path.includes("/conversations") &&
         (method === "POST" || method === "PATCH")
@@ -26,14 +27,9 @@ router.render = (req, res) => {
         });
     }
 
-    if (
-        path.includes("/messages") &&
-        (method === "POST")
-    ) {
-        // conversation-{id}.receiver-{receiverId}.messages
-        const socketChannel = `conv-${res.locals.data.conversationId}.rcv-${res.locals.data.receiver.id}.messages`
-        console.log(socketChannel)
-        // emit socket event
+    // Socket Config for Messages
+    if (path.includes("/messages") && method === "POST") {
+        const socketChannel = `conv-${res.locals.data.conversationId}.messages`
         io.emit(socketChannel, {
             data: res.locals.data,
         });
